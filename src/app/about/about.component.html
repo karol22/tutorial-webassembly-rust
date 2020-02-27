@@ -39,16 +39,17 @@
         </li>
         <li>
             Open up wasm-game-of-life/www/package.json and edit the "dependencies" to include a "wasm-game-of-life": "file:../pkg" entry:
-            <pre>
-    &#123;
-        // ...
-        "dependencies": &#123;
-            "wasm-game-of-life": "file:../pkg", // Add this line!
-        // ...
-        &#125;
+            <div class='center'>
+                <pre>
+&#123;
+    // ...
+    "dependencies": &#123;
+        "wasm-game-of-life": "file:../pkg", // Add this line!
+    // ...
     &#125;
-                  
-            </pre>
+&#125;                  
+                </pre>  
+            </div>
         </li>
         <li>
             Next, modify wasm-game-of-life/www/index.js to import wasm-game-of-life instead of the hello-wasm-pack package:

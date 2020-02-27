@@ -35,9 +35,6 @@
             Run this command within the wasm-game-of-life directory:  <code>npm init wasm-app www</code>.
         </li>
         <li>
-            To take the package <code>wasm-game-of-life</code> and use it in a web page, you can use this <a href='https://github.com/rustwasm/create-wasm-app'>Javascript template</a>.
-        </li>
-        <li>
             Open up wasm-game-of-life/www/package.json and edit the "dependencies" to include a "wasm-game-of-life": "file:../pkg" entry:
             <div class='center'>
                 <pre>
@@ -50,6 +47,14 @@
 &#125;                  
                 </pre>  
             </div>
+        </li>
+	<li>
+		First, ensure that the local development server and its dependencies are installed by running <code>npm install</code>  within the <code>wasm-game-of-life/www</code> subdirectory:
+
+                <code>npm install</code>
+	</li>
+	<li>
+            To take the package <code>wasm-game-of-life</code> and use it in a web page, you can use this <a href='https://github.com/rustwasm/create-wasm-app'>Javascript template</a>.
         </li>
         <li>
             Next, modify wasm-game-of-life/www/index.js to import wasm-game-of-life instead of the hello-wasm-pack package:

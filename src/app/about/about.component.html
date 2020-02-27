@@ -22,8 +22,58 @@
     <p><b>Instructions</b></p>
     <ol>
         <li>
-            Install Rust in your machine <code>this is a code </code>
+            Clone this repo <code>cargo generate --git https://github.com/rustwasm/wasm-pack-template</code> and use the name "wasm-game-of-life" when asked.
+        
+        </li>
+        <li>
+            Change directory <code>cd wasm-game-of-life</code> and 
+        
+        </li>
+        <li>
+            Run this command in the directory <code>wasm-pack build</code>.
+        
+        </li>
+        <li>
+            To take the package <code>wasm-game-of-life</code> and use it in a web page, you can use this <a href='https://github.com/rustwasm/create-wasm-app'>Javascript template</a>.
+        </li>
+        <li>
+            Open up wasm-game-of-life/www/package.json and edit the "dependencies" to include a "wasm-game-of-life": "file:../pkg" entry:
+            <code><pre>
+                &#123;
+                    // ...
+                    "dependencies": &#123;
+                      "wasm-game-of-life": "file:../pkg", // Add this line!
+                    // ...
+                    &#125;
+                &#125;
+                  
+            </pre></code>
+        </li>
+        <li>
+            Next, modify wasm-game-of-life/www/index.js to import wasm-game-of-life instead of the hello-wasm-pack package:
+            <br>
+            <code>import * as wasm from "wasm-game-of-life";
+            </code>
+            <br>
+            <br>
+            <code>wasm.greet();
+            </code>
+        </li>
+        <li>
+            Since we declared a new dependency, we need to install it:
+            <br>
+            <br>
+            <code>npm install</code>
+            <br>
+            <br>
+            To serve locally: 
+            <code>npm run start</code>
+        </li>
+        <li>
+           Within <code>wasm-game-of-life/www</code> run <code>npm run start</code> , you will see the Greeting message at localhost:8080.
         </li>
     </ol>
+    <img class="center" src="https://rustwasm.github.io/book/images/game-of-life/hello-world.png" />
+    <p>Congratulations, this is the end of the tutorial!</p>
     
 </div>
